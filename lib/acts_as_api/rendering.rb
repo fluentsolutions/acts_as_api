@@ -86,6 +86,8 @@ module ActsAsApi
       # create the Hash as response
       output_params[api_format] = api_response
 
+      yield output_params if block_given?
+      
       render output_params
     end
 
